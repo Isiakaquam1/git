@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<style>
+     *{
+    box-sizing: border-box;
+
+} 
+body{
+margin: 0;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+animation: colorchange 10s ease infinite;
+}
+
+main{
+    margin-left: 40%;
+    
+ height: 5vh;
+ width:20% ;
+
+
+}
+input{
+    width: 40%;
+    height: 5vh;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+button{
+    width: 25%;
+border: none;
+border-radius: 5px;
+height: 5vh;
+background-color: #cee0ec;
+cursor: pointer;
+margin-left: 40%;
+margin-top: 2%;
+}
+button:hover{
+    color: white;
+    background-color: #f39c12;
+    transform: scale(2);
+}
+
+#display{
+justify-content: center;
+align-items: center;
+margin-left: 40%;
+
+}
+</style>
+<body>
+    <main>
+        <label for="table">Enter a number: </label>
+        <input id="multi" type="number" min="1" max="50" >
+        <button onclick="generate()">Generate</button>
+        <div id="display"></div>
+    </main>
+   
+</body>
+</html>
+<script>
+function generate() {
+    let tableValue = document.getElementById("multi").value;
+
+    if (!tableValue || tableValue < 1 || tableValue > 20) {
+        alert("Please enter a number between 1 and 20.");
+        return;
+    }
+
+    let display = document.getElementById("display");
+    display.innerHTML = ""; 
+
+    let index = 1;
+    while (index <= 12) {
+        let result = tableValue * index;
+        let multiplicationText = `${tableValue} * ${index} = ${result}`;
+        display.innerHTML += `<h5>${multiplicationText}</h5>`;
+        index++;
+    }
+}
+</script> -->

@@ -9,7 +9,9 @@ function pass() {
  } else {
      alert('password mismatch')
  }
- 
+
+
+
 
 
 }
@@ -37,6 +39,7 @@ function age() {
     
 
   input = document.getElementById("display");
+
     function push(params) {
         names.push(input.value);
         console.log(names);
@@ -53,4 +56,4 @@ function age() {
      function shift(params) {
         names.shift(input.value);
         console.log(names);
-     }
+     }length
