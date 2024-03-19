@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+</head>
+<style>
+ .page{
+    width: 400px;
+    height: 700px;
+    background-color: #f0eff7;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 35%;
+ }
+ #table{
+    width: 60px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+ }
+ #tab{
+    width: 150px;
+    height: 32px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: white;
+ }
+ #display{
+    line-height: 35px;
+    color: blue;
+ }
+</style>
+<body>
+    <main class="page">
+        <label  for="table">Enter a number:</label>
+        <input id="table" type="number" min="1" max="20">
+        <button id="tab" onclick="generate()">Generate Table</button>
+        <div id="display"></div>
+    </main>
+
+    <script>
+        function generate() {
+            let tableValue = document.getElementById("table").value;
+
+            if (!tableValue || tableValue < 1 || tableValue > 20) {
+                alert("Please enter a number between 1 and 20.");
+                return;
+            }
+
+            let display = document.getElementById("display");
+            display.innerHTML = ""; 
+
+            let index = 1;
+            while (index <= 12) {
+                let result = tableValue * index;
+                let multiplicationText = `${tableValue} * ${index} = ${result}`;
+                display.innerHTML += `<h2>${multiplicationText}</h2>`;
+                index++;
+            }
+        }
+    </script>
+</body>
+</html>

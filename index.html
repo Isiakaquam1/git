@@ -87,3 +87,58 @@ function generate() {
     }
 }
 </script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Multiplication Generator</title>
+</head>
+<style>
+    label{
+        font-size: 20px;
+    }
+    input {
+        width: 100px;
+        height: 20px;
+    }
+    button {
+        background-color: black;
+        color: white;
+        height: 26px;
+        border: 0;
+        border-radius: 5px;
+
+    }
+</style>
+<body>
+    <main>
+        <label for="Multiplication">Enter a number:</label>
+        <input id="Multiplication" type="number" min="1" max="20">
+        <button onclick="generate()">Generate Multiplication</button>
+        <div id="output"></div>
+    </main>
+
+    <script>
+        function generate() {
+            let MultiplicationValue = document.getElementById("Multiplication").value;
+
+            if (!MultiplicationValue || MultiplicationValue < 1 || MultiplicationValue > 20) {
+                alert("Please enter a number between 1 and 20.");
+                return;
+            }
+
+            let output = document.getElementById("output");
+            output.innerHTML = ""; 
+
+            let index = 1;
+            while (index <= 12) {
+                let result = MultiplicationValue * index;
+                let multiplicationText = `${MultiplicationValue} * ${index} = ${result}`;
+                output.innerHTML += `<h2>${multiplicationText}</h2>`;
+                index++;
+            }
+        }
+    </script>
+</body>
+</html>

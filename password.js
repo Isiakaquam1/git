@@ -57,3 +57,5 @@ function age() {
         names.shift(input.value);
         console.log(names);
      }length
+
+  
