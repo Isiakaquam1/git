@@ -28,20 +28,27 @@ function age() {
  }
 
 }
-   let names = ["Victot", "Samuel", "David"];
-    console.log(names);
-     names.push("ola");
-    console.log(names);
-    names.shift('quam')
-    console.log(names);
-    names.unshift('ade');
-    console.log(names);
-    
+//    let names = ["Victot", "Samuel", "David"];
+//     console.log(names);
+//      names.push("ola");
+//     console.log(names);
+//     names.shift('quam')
+//     console.log(names);
+//     names.unshift('ade');
+//     console.log(names);
+    let names = [];
 
+    // document.getElementById("myButton").onclick = function () {
+    //     radius = document.getElementById("myText").value;
+    //     radius = Number(radius);
+    //     circumfrence = 2 * pi * radius ;
+    //      document.getElementById("myH3").textContent = circumfrence;
+    //     console.log(circumfrence);
   input = document.getElementById("display");
 
     function push(params) {
-        names.push(input.value);
+        names.push(display.value);
+        document.getElementById("myH1").textContent = names
         console.log(names);
      }
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+
+    </style>
+</head>
+
+<body>
+    <main>
+   <div class="display">
+   <div >
+    <input type="text" name="" id="input"/> <button onclick="addTodo()">add</button>
+   </div>
+    <div id="todoDiv">
+        
+    </div>
+</div>
+
+</main>
+</body>
+
+</html>
+<script >
+    let input = document.getElementById('input')
+    let todoDiv = document.getElementById('todoDiv')
+    let todoArr = []
+
+    function addTodo() {
+     todoDiv.innerHTML +=  input.value
+        todoArr.push(input.value)
+           console.log(todoArr);
+              displayArr() 
+                todoDiv.innerHTML = ''
+                  for (let index = 0; index < todoArr.length; index++) {
+                     todoDiv.innerHTML += `<p> ${todoArr[index]} <button >delete </button></p>`
+           }
+    }
+    
+     function displayArr() {
+        todoDiv.innerHTML = ''
+    for (let index = 0; index < todoArr.length; index++) {
+     todoDiv.innerHTML += `<p> ${todoArr[index]} <button >delete </button></p>`
+    
+    }
+    }
